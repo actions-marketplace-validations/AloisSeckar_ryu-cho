@@ -35,6 +35,11 @@ inputs:
     description: 'GitHub workflow name that executes Ryu Cho action. Defaults to `ryu-cho`'
     required: false
     default: 'ryu-cho'
+  pull-requests:
+    description: 'Can be used to override default behavior (attempting to create a pull-request)'
+    required: false
+    type: 'boolean'
+    default: 'true'
 
 runs:
   using: "composite"
@@ -54,6 +59,7 @@ runs:
         TRACK_FROM: ${{ inputs.track-from }}
         PATH_STARTS_WITH: ${{ inputs.path-starts-with }}
         WORKFLOW_NAME: ${{ inputs.workflow-name }}
+        PULL_REQUESTS: ${{ inputs.pull-requests }}
       run: |
         cd ryu-cho
         yarn install

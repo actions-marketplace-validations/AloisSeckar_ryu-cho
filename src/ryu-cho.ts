@@ -94,7 +94,9 @@ export class RyuCho {
       log('W', 'Issue already exists')
     }
 
-    await this.createPullRequest(hash, shortHash, feed, issueNo)
+    if (this.config.pullRequests) {
+      await this.createPullRequest(hash, shortHash, feed, issueNo)
+    }
   }
 
   protected async containsValidFile(feed: Feed, hash: string) {

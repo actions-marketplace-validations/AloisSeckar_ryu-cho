@@ -84,6 +84,13 @@ export interface UserConfig {
    * @example 'docs/'
    */
   pathStartsWith?: string
+
+  /**
+   * Allow or disallow automatic pull-request creation.
+   *
+   * @example 'true'
+   */
+  pullRequests?: string
 }
 
 export interface Config {

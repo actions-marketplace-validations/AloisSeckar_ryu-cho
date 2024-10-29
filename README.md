@@ -60,6 +60,10 @@ jobs:
           # Ryu-Cho determines the last run by looking into last workflow
           # run timestamp. Optional. Defaults to `ryu-cho`.
           workflow-name: ryu-cho
+
+          # Allow or disallow automatic pull-request creation.
+          # Optional. Defaults to `true`.
+          pull-requests: true
 ```
 
 The important part to note is that you must match the GitHub workflow name to `workflow-name` option.

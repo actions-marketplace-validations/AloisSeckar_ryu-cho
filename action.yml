@@ -1,5 +1,5 @@
-name: 'Ryu-Cho'
-description: 'Automatic git commit tracking service.'
+name: 'Ryu-Cho-AS'
+description: 'Automatic git commit tracking service with optional automatic pull-requests.'
 
 inputs:
   access-token:

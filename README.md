@@ -4,6 +4,8 @@ Ryu-Cho (means "fluent" in Japanese) is a GitHub Action that creates issues and 
 
 Ryu-Cho is a fork of [Che-Tsumi](https://github.com/vuejs-jp/che-tsumi). It works almost identical, while Che-Tsumi works as a stand-alone service while Ryu-Cho works with GitHub Action.
 
+This action is a fork of the original [Ryu-Cho](https://github.com/vuejs-translations/ryu-cho) enhanced with a new `pullRequests` option.
+
 ## Usage
 
 Ryu-Cho requires GitHub authentication to create issues and PRs to the repository. At first, create [Encrypted secret](https://docs.github.com/en/actions/reference/encrypted-secrets) that has access to the repository which you want to set up Ryu-Cho. Here we assume you've created a secret called `ACCESS_TOKEN`.
@@ -23,7 +25,7 @@ jobs:
     name: Ryu Cho
     runs-on: ubuntu-latest
     steps:
-      - uses: AloisSeckar/ryu-cho@v1.0.0
+      - uses: AloisSeckar/ryu-cho@v1.1.0
         with:
           # GitHub access token. Required.
           access-token: ${{ secrets.ACCESS_TOKEN }}

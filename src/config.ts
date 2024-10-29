@@ -100,6 +100,7 @@ export interface Config {
   workflowName: string
   trackFrom: string
   pathStartsWith?: string
+  pullRequests?: string
 
   remote: {
     upstream: Remote
@@ -122,6 +123,7 @@ export function createConfig(config: UserConfig): Config {
     workflowName: config.workflowName ?? 'ryu-cho',
     trackFrom: config.trackFrom,
     pathStartsWith: config.pathStartsWith,
+    pullRequests: config.pullRequests,
 
     remote: {
       upstream: {

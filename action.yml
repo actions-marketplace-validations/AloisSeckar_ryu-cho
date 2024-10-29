@@ -65,3 +65,7 @@ runs:
         yarn install
         yarn start
       shell: bash
+
+branding:
+  icon: 'git-merge'
+  color: 'green'

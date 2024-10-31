@@ -36,10 +36,9 @@ inputs:
     required: false
     default: 'ryu-cho'
   pull-requests:
-    description: 'Can be used to override default behavior (attempting to create a pull-request)'
+    description: 'Can be used to override default behavior (attempting to create a pull-request). Values `yes` or `no`'
     required: false
-    type: 'boolean'
-    default: 'true'
+    default: 'yes'
 
 runs:
   using: "composite"

@@ -94,7 +94,8 @@ export class RyuCho {
       log('W', 'Issue already exists')
     }
 
-    if (this.config.pullRequests === 'true') {
+    log('I', 'Create pull request? ' + this.config.pullRequests)
+    if (this.config.pullRequests === 'yes') {
       await this.createPullRequest(hash, shortHash, feed, issueNo)
     }
   }

@@ -20,7 +20,7 @@ const config = createConfig({
   workflowName: process.env.WORKFLOW_NAME,
   trackFrom: process.env.TRACK_FROM!,
   pathStartsWith: process.env.PATH_STARTS_WITH,
-  pullRequests: process.env.PULL_REQUESTS
+  pullRequests: process.env.PULL_REQUESTS === 'yes' ? 'yes' : 'no'
 })
 
 const ryuCho = new RyuCho(config)

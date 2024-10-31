@@ -87,10 +87,11 @@ export interface UserConfig {
 
   /**
    * Allow or disallow automatic pull-request creation.
+   * Values `yes` or `no`
    *
-   * @example 'true'
+   * @example 'yes'
    */
-  pullRequests?: string
+  pullRequests?: 'yes' | 'no'
 }
 
 export interface Config {
@@ -100,7 +101,7 @@ export interface Config {
   workflowName: string
   trackFrom: string
   pathStartsWith?: string
-  pullRequests?: string
+  pullRequests?: 'yes' | 'no'
 
   remote: {
     upstream: Remote

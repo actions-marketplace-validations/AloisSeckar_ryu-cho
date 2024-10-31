@@ -1,10 +1,10 @@
-# Ryu-Cho
+# Ryu-Cho AS
 
 Ryu-Cho (means "fluent" in Japanese) is a GitHub Action that creates issues and PRs from the head repo based on its commit. Very useful for tracking diffs between translating docs, for example.
 
 Ryu-Cho is a fork of [Che-Tsumi](https://github.com/vuejs-jp/che-tsumi). It works almost identical, while Che-Tsumi works as a stand-alone service while Ryu-Cho works with GitHub Action.
 
-This action is a fork of the original [Ryu-Cho](https://github.com/vuejs-translations/ryu-cho) enhanced with a new `pullRequests` option.
+This action is a fork of the original [Ryu-Cho](https://github.com/vuejs-translations/ryu-cho) enhanced with a new `pull-requests` option.
 
 ## Usage
 
@@ -25,7 +25,7 @@ jobs:
     name: Ryu Cho
     runs-on: ubuntu-latest
     steps:
-      - uses: AloisSeckar/ryu-cho@v1.1.0
+      - uses: AloisSeckar/ryu-cho@v1.2.0
         with:
           # GitHub access token. Required.
           access-token: ${{ secrets.ACCESS_TOKEN }}
@@ -64,8 +64,8 @@ jobs:
           workflow-name: ryu-cho
 
           # Allow or disallow automatic pull-request creation.
-          # Optional. Defaults to `true`.
-          pull-requests: true
+          # Optional. Values `yes` or `no`. Defaults to `yes`.
+          pull-requests: yes
 ```
 
 The important part to note is that you must match the GitHub workflow name to `workflow-name` option.

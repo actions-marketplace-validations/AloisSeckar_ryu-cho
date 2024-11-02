@@ -25,7 +25,7 @@ jobs:
     name: Ryu Cho
     runs-on: ubuntu-latest
     steps:
-      - uses: AloisSeckar/ryu-cho@v1.2.0
+      - uses: AloisSeckar/ryu-cho@v1
         with:
           # GitHub access token. Required.
           access-token: ${{ secrets.ACCESS_TOKEN }}
